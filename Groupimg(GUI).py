@@ -4,12 +4,18 @@
 import cv2
 from PIL import ImageFont, ImageDraw, Image
 import numpy as np
+import PySimpleGUI as sg
 
-Username=input('请输入新人的用户名:')
-print('正在生成，待会会弹出预览窗口')
+#GUI
+layout = [[sg.Text('请输入新人的用户名:')],
+          [sg.Input()],
+          [sg.Button('提交')]]
 
-word = '欢迎'+Username+'进群' #第一行句子
-namehigh = len(Username) #判断用户名长度
+window = sg.Window('欢迎新人表情包生成', layout, icon=r'LOGO.ico') #设置窗口
+event, value = window.Read() #读取输入值
+name = value[0]
+word = '欢迎'+name+'进群' #生成第一行句子
+namehigh = len(name) #判断用户名长度
 
 # 编辑图片路径
 bk_img= cv2.imread("first.jpg")
@@ -24,10 +30,10 @@ draw= ImageDraw.Draw(img_pil)
 #绘制文字信息# (100,300)为字体的位置，(255,255,255)为颜色RGB码
 draw.text((70,230), word, font= font, fill= (0,0,0))
 bk_img= np.array(img_pil)
-
+ 
 cv2.imshow("finally",bk_img) #展示图片
-print('正在保存...')
-cv2.waitKey()
+cv2.waitKey()# 保存图片路径
 cv2.imwrite("finally.jpg",bk_img)#输出图片
-print('程序根目录中的finally.jpg为所求作的表情包')
-input('按任意键退出...')
+
+
+

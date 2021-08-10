@@ -26,9 +26,21 @@ licence（许可证）
 
 LOGO.ico（作者的LOGO）
 
-## 使用教程
+## 无GUI模式使用教程
 
-下载此仓库的所有文件，运行`Groupimg.exe`，在弹出的窗口中输入新人的昵称，点击提交
+（无GUI模式不自备exe可执行文件，您需要提前配置好Python环境和所使用的库）
+
+下载此仓库的所有文件，运行`Groupimg.py`，在终端中输入新人的昵称后回车
+
+然后会出现一个预览窗口（生成的表情包），预览后关闭此窗口，主程序根目录中会生成一个名为`finally.jpg`的图片，那就是刚才出现过的表情包
+
+然后把它发到群上面去吧ヾ(≧▽≦*)o
+
+## GUI使用教程
+
+（使用GUI可能会降低启动速度）
+
+下载此仓库的所有文件，运行`Groupimg(GUI).exe`，在弹出的窗口中输入新人的昵称，点击提交
 
 然后会出现一个预览窗口（生成的表情包），预览后关闭此窗口，主程序根目录中会生成一个名为`finally.jpg`的图片，那就是刚才出现过的表情包
 
@@ -44,7 +56,7 @@ LOGO.ico（作者的LOGO）
 
 ```powershell
 pip install opencv-python
-pip install PySimpleGUI
+pip install PySimpleGUI #GUI库
 pip install Pillow
 ```
 
@@ -87,3 +99,4 @@ HarmonyOS Sans SC Black为可商用状态，字体许可证见fontlicence.txt，
 
 邮箱：WhitemuTeam@outlook.com
 
+WhitemuTeam
