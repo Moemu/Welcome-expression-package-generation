@@ -1,5 +1,5 @@
 #By WhitemuTeam(Github)
-#安装库：pip install opencv-python/pip install PySimpleGUI
+#安装库：pip install opencv-python
 
 import cv2
 from PIL import ImageFont, ImageDraw, Image
